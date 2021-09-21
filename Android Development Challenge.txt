@@ -1,0 +1,11 @@
+Android Development Challenge
+* Given a 'listing' endpoint to the reddit API (https://www.reddit.com/dev/api), display a list of reddit listings with the thumbnail and title. This list should be able to be paginated. Clicking on one of the rows should take the user to a view with the comments for that listing.
+Subreddit - https://www.reddit.com/r/food/Subreddit json - https://www.reddit.com/r/food.json GET callTo fetch the comments of the first listing on this subreddit, there is a field called “permalink” which provides you the link to be able to make a GET call to retrieve the comments. You will need to make a GET call by making a call as follow :URL - https://www.reddit.com + permalink + “.json"Example : https://www.reddit.com/r/food/comments/pjktkh/homemade_oreo_chocolate_cake/.json  as described in this documentation https://www.reddit.com/dev/api/#GET_comments_{article}The field “thumbnail” only gives you the image of the post if one is uploaded by the user, you can load a default placeholder in case “thumbnail” isn’t available.
+
+* The UI should be kept simple. We are looking for clean, organized, and 
+testable code.
+
+* The whole project should take less than a day to complete, but let us know 
+if you'll need longer or have any clarification questions. Note this does 
+not mean you have to return the project in <1 day. We know that your time 
+is valuable and want to set proper expectations
